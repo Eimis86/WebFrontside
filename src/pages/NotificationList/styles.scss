@@ -1,0 +1,31 @@
+.notification-detail{
+    padding-bottom: 22px;
+}
+
+.notifications-header{
+    border-bottom: 1px solid #E5E8EB;
+}
+
+.notification-body{
+    padding-top: 25px;
+    font-weight: var(--font-weight-bold);
+}
+
+.notification-size{
+    width: 598px;
+}
+
+.button-container{
+    display: flex;
+    gap: var(--gap-xs);
+    padding-bottom: 30px;
+}
+
+.detail{
+    color:var(--text-color-medium);
+    line-height: 0.75rem;
+}
+
+.header{
+    color:var(--text-color);
+}

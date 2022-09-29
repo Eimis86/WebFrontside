@@ -1,0 +1,31 @@
+.tab-list {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 39px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tab-item {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  cursor: pointer;
+
+  &.active, &--selected {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+  }
+}
+
+.tab-indicator {
+  background: var(--color-primary);
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  transition: left 0.3s ease-in, width 0.2s linear;
+}

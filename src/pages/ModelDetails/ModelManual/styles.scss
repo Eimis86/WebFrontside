@@ -1,0 +1,119 @@
+.manual {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: 400px;
+  overflow-y: auto;
+
+  .manual-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    //overflow: auto;
+  }
+
+  .header {
+    font-size: var(--font-size-base-lg);
+    font-weight: var(--font-weight-bold);
+    line-height: 4rem;
+    cursor: pointer;
+  }
+
+  .collapse-header {
+    font-size: var(--font-size-base-lg);
+    font-weight: var(--font-weight-bold);
+    min-height: 54px;
+    border-style: none;
+    padding: 0;
+    background-color: var(--color-white);
+    cursor: default;
+    user-select: none;
+  }
+
+  .collapse-arrow-icon {
+    //color: var(--border-color);
+    color: #B3B5BB;
+
+    &--expanded {
+      transform: scaleY(-1);
+    }
+  }
+
+  .button-block {
+    margin: 16px 0;
+  }
+
+  .play-button {
+    [data-icon] {
+      color: var(--color-white);
+      background-color: var(--color-primary);
+      border-radius: 50%;
+    }
+    &:hover {
+      background-color: transparent;
+
+      [data-icon] {
+        background-color: var(--color-primary-dark);
+      }
+    }
+  }
+
+  .steps-button {
+    [data-icon] {
+      color: var(--color-primary-alter);
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+    }
+
+    &:hover {
+      background-color: transparent;
+
+      [data-icon] {
+        background-color: var(--background-color);
+      }
+    }
+
+    &--selected, &--selected:hover {
+      [data-icon] {
+        color: var(--color-white);
+        background-color: var(--color-primary-alter);
+      }
+    }
+  }
+
+  .manual-chapter {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .manual-step {
+    padding: 16px 0;
+    margin-left: 32px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-base);
+      margin-bottom: 16px;
+    }
+  }
+
+  .select-step-arrow {
+    color: var(--color-primary)
+  }
+}
+
+.hidden-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

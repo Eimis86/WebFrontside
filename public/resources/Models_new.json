@@ -1,0 +1,222 @@
+[
+  {
+    "id": 0,
+    "category": "Industrial",
+    "prefab": "Oil Engine",
+    "name": "Ecotec Engine",
+    "description": "A machine designed to convert one form of energy into mechanical energy The GM Ecotec engine, also known by its codename L850, is a family of all-aluminium inline-four engines, displacing between 1.4 and 2.5 litres. While these engines were based on the GM Family II engine, the architecture was substantially re-engineered for the new Ecotec application produced since 2000.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/engine.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Engine/EngineIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 1,
+    "category": "Military",
+    "prefab": "Tank AMX-56",
+    "name": "AMX-56 Tank",
+    "description": "The Leclerc tank is a main battle tank built by GIAT, now Nexter of France. It was named in honour of General Philippe Leclerc de Hauteclocque, who led the French element of the drive towards Paris while in command of the Free French 2nd Armoured Division in World War II.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/tank.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Tank/TankIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 2,
+    "category": "Industrial",
+    "prefab": "Truck Manipulator",
+    "name": "Aircraft deicer truck",
+    "description": "The open-basket aircraft deicer/ washer was specifically designed to provide a wide range of options to handle requirements at both small and large airports. Model: CT1800 1,200 Gallon (4550 Liter) fluid storage capacity. Tanks constructed of Stainless. SteelDeicing system: 1,000 gallon capacity. Anti-icing system: 200 gallon capacity.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/truckmanipulator.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/TruckManipulator/TruckIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 3,
+    "category": "Industrial",
+    "prefab": "Coffeemachine",
+    "name": "Coffee machine RTX-3090",
+    "description": "An espresso machine brews coffee by forcing pressurized water near boiling point through a puck of ground coffee and a filter in order to produce a thick, concentrated coffee called espresso.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/coffeemachine.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/coffeeIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 4,
+    "category": "Aviation",
+    "prefab": "Quadrocopter",
+    "name": "DJI Mini 2 Drone",
+    "description": "Small drone with an integrated camera designer for high quality professional photography it weights less than 249 g, it weighs about as much as an apple and fits in the palm of your hand.  max battery life of 31 minutes Mini 2 can resist 29-38kph winds and take off at a max altitude of 4,000 meters, so your footage is stable even when flying along a windy coastline or high above an alpine forest.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/drone.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Drone/DroneIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 5,
+    "category": "Industrial",
+    "prefab": "Fire Extinguisher",
+    "name": "Fire extinguisher",
+    "description": "An active fire protection device used to extinguish or control small fires, often in emergency situations. In stored pressure units, the expellant is stored in the same chamber as the firefighting agent itself. Depending on the agent used, different propellants are used.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/fireextinguisher.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/FireEx/FireexIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 6,
+    "category": "Industrial",
+    "prefab": "ISRK-8",
+    "name": "Feed distributor ISRK-8",
+    "description": "Feed distributor with horizontal arrangement. Feeder Master is equipped with a two-stage reducer. he two-stage gearbox allows to obtain 4 speeds of screw rotation and to select the optimal operating modes depending on the type of feeds being loaded and / or their condition (frozen, wet, long-fiber). Screw rotation speed - 15; 21; 26; 45 rpm.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/ispk-8.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/ISRK/ISRKIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 7,
+    "category": "Industrial",
+    "prefab": "Microscope",
+    "name": "Microscope",
+    "description": "An instrument used to see objects that are too small to be seen by the naked eye. Microscopes are effectively just tubes packed with lenses, curved pieces of glass that bend (or refract) light rays passing through them.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/microscope.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Microscope/icon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 8,
+    "category": "Industrial",
+    "prefab": "Smoke Detector",
+    "name": "Smoke detector",
+    "description": "Commercial security devices issue a signal to a fire alarm control panel as part of a fire alarm system, while household smoke detectors, also known as smoke alarms, generally issue a local audible or visual alarm from the detector itself or several detectors if there are multiple smoke detectors interlinked.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/smoke-detector.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/SmokeDetector/SmokeIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 9,
+    "category": "Industrial",
+    "prefab": "Teaport Bork",
+    "name": "Bork kettle - K800",
+    "description": "Container for boiling water, that has a lid, handle, and spout and is made from plastic or metal. - Power: 2200-2400 W - Volume: 1,7 l - Temperature conditions: 5 - Dimensions (DhShhV): 18x23x25 cm - Weight: 1.55 kg - Length of an electric cable: 1 m - case Material: stainless steel - Guarantee period: 5 years",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/teapot.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Teapot/TeapotIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 10,
+    "category": "Industrial",
+    "prefab": "Swan Coffee Machine",
+    "name": "Nordic Espresso Coffee",
+    "description": "Machine Model: SK22110 The Espresso Coffee Machine doesn’t just look the part, its elegant design extends to the coffee it creates whether straight up espresso or a luxurious cappuccino. High performance - 15 Bars of pressure and a self-priming system means the Swan Retro espresso maker is always ready to make delicious coffees in minutes. Espresso,with Milk Frother, Dual Brewer, Drip Tray, Removable Watertank, 1100W, Capacity (Watertank): 1.2 L, Capacity (Cups): 2 Cups, Permanent , Colour: Blue, Green, Grey",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/swancoffee.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/SwanCoffee/SwanIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 11,
+    "category": "Industrial",
+    "prefab": "Toaster",
+    "name": "Toaster",
+    "description": "A toaster is a small electric appliance designed to expose various types of sliced bread to radiant heat, browning the bread so it becomes toast.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/toaster.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Toaster/ToasterIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 12,
+    "category": "Industrial",
+    "prefab": "Robotic Arm",
+    "name": "Robotic Arm",
+    "description": "The robotic arm is designed for very precise and accurate manipulation with objects, which the human hand is not capable of providing.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/roboarm.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/RoboticArm/RoboarmIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 13,
+    "category": "Military",
+    "prefab": "LandDrone",
+    "name": "Rasul Version",
+    "description": "The robotic arm is designed for very precise and accurate manipulation with objects, which the human hand is not capable of providing.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/land-drone.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/RoboticArm/RoboarmIcon.png",
+    "manual": false,
+    "created": "June 2021"
+  },
+  {
+    "id": 14,
+    "category": "Industrial",
+    "prefab": "Powerplate",
+    "name": "Powerplate",
+    "description": "The MOVE by Power Plate® is the perfect combination of size and function. It’s base has been designed from the ground up to save as much space as possible without compromising a shred of performance. It’s light enough to be moved from room to room, yet sturdy enough to support a full 300lbs/136kg. The MOVE is available in two different colours Red and Silver. Dimensions: 77cm x 61cm x 23cm, Weight: 39 kg, Maximum Load: 136 kg",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/powerplate.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Models/Powerplate/powerplate.png",
+    "manual": "/resources/WebManual/14.json",
+    "created": "June 2021"
+  },
+  {
+    "id": 15,
+    "category": "Industrial",
+    "prefab": "Grill",
+    "name": "GreenEgg Grill",
+    "description": "Grilling is a form of cooking that involves dry heat applied to the surface of food, commonly from above, below or from the side.Grilling usually involves a significant amount of direct, radiant heat, and tends to be used for cooking meat and vegetables quickly. Food to be grilled is cooked on a grill (an open wire grid such as a gridiron with a heat source above or below), using a cast iron/frying pan, or a grill pan (similar to a frying pan, but with raised ridges to mimic the wires of an open grill).",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/grill.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Models/Grill/GrillIcon.png",
+    "manual": false,
+    "created": "July 2021"
+  },
+  {
+    "id": 16,
+    "category": "Industrial",
+    "prefab": "Gym",
+    "name": "Cloyd Gym",
+    "description": "This is a device generally used for walking, running, or climbing while staying in the same place.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/gym.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Models/Gym/GymIcon.png",
+    "manual": false,
+    "created": "July 2021"
+  },
+  {
+    "id": 17,
+    "category": "Industrial",
+    "prefab": "Bicycle",
+    "name": "Bicycle",
+    "description": "The bicycle is extraordinarily efficient in both biological and mechanical terms. The bicycle is the most efficient human-powered means of transportation in terms of energy a person must expend to travel a given distance. From a mechanical viewpoint, up to 99% of the energy delivered by the rider into the pedals is transmitted to the wheels, although the use of gearing mechanisms may reduce this by 10–15%. In terms of the ratio of cargo weight a bicycle can carry to total weight, it is also an efficient means of cargo transportation.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/bicycle.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Models/Bicycle/BicycleIcon.png",
+    "manual": false,
+    "created": "July 2021"
+  },
+  {
+    "id": 18,
+    "category": "Industrial",
+    "prefab": "Chainsaw",
+    "name": "Chainsaw",
+    "description": "A chainsaw (or chain saw) is a portable gasoline-, electric-, or battery-powered saw that cuts with a set of teeth attached to a rotating chain driven along a guide bar. It is used in activities such as tree felling, delimbing, bucking, pruning, cutting firebreaks in wild land fire suppression, and harvesting of firewood.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/chainsaw.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Models/Chainsaw/ChainsawIcon.png",
+    "manual": false,
+    "created": "July 2021"
+  },
+  {
+    "id": 19,
+    "category": "Industrial",
+    "prefab": "Firetruck",
+    "name": "Firetruck",
+    "description": "Fire Truck- is a road vehicle (usually a truck) that functions as a firefighting apparatus. The primary purposes of a fire engine include transporting firefighters and water to an incident as well as carryingequipment for firefighting operations. They have specialized functions, such as wildfire suppression and aircraft rescue and firefighting, and may also carry equipment for technical rescue. They are fitted with sirens and emergency vehicle lighting, as well as communication equipment such as two-way radios and mobile computer technology.",
+    "model": "https://webgl.vr.inlu.net/MobileViewerResources/GLTF/firetruck.glb",
+    "image": "https://webgl.vr.inlu.net/MobileViewerResources/Models/Firetruck/FiretruckIcon.png",
+    "manual": "https://webgl.vr.inlu.net/MobileViewerResources/Models/Firetruck/Manuals.json",
+    "created": "November 2021"
+  }
+]

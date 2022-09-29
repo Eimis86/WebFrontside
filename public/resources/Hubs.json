@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "ASUS Tech Hub",
+    "image": "/resources/img/01.png"
+  },
+  {
+    "id": 1,
+    "name": "Biogen",
+    "image": "/resources/img/02.png"
+  },
+  {
+    "id": 2,
+    "name": "Asphalt",
+    "image": "/resources/img/03.png"
+  },
+  {
+    "id": 3,
+    "name": "USA Airlines",
+    "image": "/resources/img/04.png"
+  },
+  {
+    "id": 4,
+    "name": "USA Navy",
+    "image": "/resources/img/05.png"
+  },
+  {
+    "id": 5,
+    "name": "Indoor",
+    "image": "/resources/img/06.png"
+  }
+]

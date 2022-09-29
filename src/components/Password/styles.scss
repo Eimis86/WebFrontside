@@ -1,0 +1,47 @@
+.text-input {
+  //composes: input-control from global;
+
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: var(--font-size-base-sm);
+  width: 100%;
+
+  position: relative;
+
+  &:hover {
+    border-color: var(--color-primary);
+  }
+
+  &:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary);
+  }
+
+  &--error, &--error:focus-within, &--error:hover {
+    border-color: var(--color-error);
+    color: var(--color-error);
+    box-shadow: none;
+  }
+
+  input {
+    flex: 1 1 100%;
+    border: none;
+    outline: none;
+    padding: 1rem 3rem 1rem 1rem;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .switch-button {
+    background-color: inherit;
+    position: absolute;
+    right: 16px;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+}

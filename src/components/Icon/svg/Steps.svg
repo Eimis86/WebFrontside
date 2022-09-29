@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="Steps" transform="translate(1954.084 -887.042) rotate(90)" fill="currentColor">
+    <g transform="translate(895.576 1945.599) rotate(-90)">
+      <path d="M.5,2.071H10.787a.53.53,0,0,0,.5-.552V.552a.53.53,0,0,0-.5-.552H.5A.53.53,0,0,0,0,.552v.966A.53.53,0,0,0,.5,2.071Z" transform="translate(5.619 14.124)"/>
+      <path d="M.5,2.071H10.787a.53.53,0,0,0,.5-.552V.552a.53.53,0,0,0-.5-.552H.5A.53.53,0,0,0,0,.552v.966a.53.53,0,0,0,.5.552Z" transform="translate(5.619 7.526)"/>
+      <path d="M.5,2.071H10.787a.53.53,0,0,0,.5-.552V.552a.53.53,0,0,0-.5-.552H.5A.53.53,0,0,0,0,.552v.966a.53.53,0,0,0,.5.552Z" transform="translate(5.619 0.954)"/>
+      <ellipse cx="1.881" cy="1.881" rx="1.881" ry="1.881" transform="translate(0 13.17)"/>
+      <ellipse cx="1.881" cy="1.881" rx="1.881" ry="1.881" transform="translate(0 6.598)"/>
+      <ellipse cx="1.881" cy="1.881" rx="1.881" ry="1.881"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+.theme-selector {
+  display: flex;
+  gap: 1rem;
+}
+
+.theme-color {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--color-primary);
+  border-radius: 26px;
+  position: relative;
+
+  &--selected {
+    &::after {
+      position: absolute;
+      content: "\2713";
+      color: var(--color-primary);
+      background-color: var(--color-secondary);
+      left: 13px;
+      top: 13px;
+      width: 26px;
+      height: 26px;
+      border-radius: 13px;
+      padding: 0 6px;
+    }
+  }
+}

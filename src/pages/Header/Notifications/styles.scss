@@ -1,0 +1,57 @@
+.notification-container {
+    position: absolute;
+    right: 103px;
+    top: 84px;
+    width: 460px;
+    z-index: 5;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.11);
+    transition: height 0.3s ease-in-out;
+    border: 1px solid var(--border-color);
+    height: 488px;
+    overflow: auto;
+  }
+  
+  .notification {
+
+    &__underline{
+        text-decoration: none;
+    }
+
+    &__header {
+        padding: 21px 23px 0px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    &__title {
+        line-height: 23px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 11px;
+        padding-bottom: 30px;
+    }
+
+    &__main {
+        padding: 21px 23px 25px;
+    }
+
+    .main__header {
+        display: flex;
+        justify-content: space-between;
+        line-height: 23px;
+    }
+
+    &--description{
+        color:var(--text-color-medium);
+        line-height: 0.75rem;
+    }
+
+    &--header{
+        color:var(--text-color);
+    }
+
+  }

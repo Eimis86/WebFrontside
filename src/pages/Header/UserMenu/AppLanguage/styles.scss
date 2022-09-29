@@ -1,0 +1,43 @@
+.app-language {
+
+    &__header {
+      padding: 20px 16px 16px 23px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .header-title {
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-base);
+        margin-bottom: 5px;
+        color: var(--text-color);
+      }
+
+      .header-description {
+        font-size: var(--font-size-base-sm);
+        line-height: 21px;
+        color: var(--text-color-medium);
+      }
+    }
+
+    &__main {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    &__actions {
+      margin: 25px 23px 36px;
+
+      .action-item {
+        font-size: var(--font-size-base);
+        margin: 25px 0;
+        color: var(--text-color);
+        cursor: pointer;
+
+        &_active {
+          color: var(--color-primary);
+          cursor: pointer;
+        }
+      }
+    }
+}

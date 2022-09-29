@@ -1,0 +1,60 @@
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.progress-bar {
+  height: 6px;
+  border-radius: 3px;
+  background-color: var(--color-secondary);
+  width: 100%;
+  position: relative;
+
+  .progress-bar__fill {
+    height: 6px;
+    border-radius: 3px;
+    background-color: var(--color-primary);
+    position: absolute;
+  }
+}
+
+.circular-animation{
+  margin: auto;
+  width: 96px;
+  height: 96px;
+  animation: spinner 1s linear infinite;
+  color:transparent;
+}
+
+.circular-text{
+  position: absolute;
+  font-weight: 600;
+  width: 96px;
+  text-align: center;
+  top: 40%;
+}
+
+:global {
+  .CircularProgressbar {
+    width: 100%;
+    vertical-align: middle;
+
+    .CircularProgressbar-path {
+      stroke: var(--color-primary);
+      stroke-linecap: round;
+      transition: stroke-dashoffset 0.5s ease 0s;
+    }
+
+    .CircularProgressbar-trail {
+
+      stroke-linecap: round;
+    }
+
+    .CircularProgressbar-text {
+      fill: var(--color-primary);
+      font-size: 20px;
+      dominant-baseline: middle;
+      text-anchor: middle;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+# Official framework image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/node/tags/
+image: node:latest
+
+# This folder is cached between builds
+# https://docs.gitlab.com/ee/ci/yaml/index.html#cache
+cache:
+  paths:
+    - node_modules/
+
+stages:
+    - build
+
+build-static-dev:
+    tags: 
+        - docker
+    stage: build
+    rules:
+        - if: '$CI_COMMIT_BRANCH == "develop"' 
+
+    artifacts:
+        paths:
+            - dist
+    before_script:
+        - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+        - mkdir -p ~/.ssh
+        - eval $(ssh-agent -s)
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    script:
+        - cat src/const.develop.ts > src/const.ts
+        - npm i
+        - npm ci
+        - npm run build
+        - ssh-add <(echo "$webserverrsa")
+        - ssh -o StrictHostKeyChecking=no hubs@prod.vr.inlu.net 'rm -rf /home/hubs/www/dev/front/*'
+        - scp -P22 -r dist/* hubs@prod.vr.inlu.net:/home/hubs/www/dev/front/
+
+build-static-stage:
+    tags: 
+        - docker
+    stage: build
+    rules:
+        - if: '$CI_COMMIT_BRANCH == "stage"' 
+
+    artifacts:
+        paths:
+            - dist
+    before_script:
+        - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+        - mkdir -p ~/.ssh
+        - eval $(ssh-agent -s)
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    script:
+        - cat src/const.stage.ts > src/const.ts
+        - npm i
+        - npm ci
+        - npm run build
+        - ssh-add <(echo "$webserverrsa")
+        - ssh -o StrictHostKeyChecking=no hubs@prod.vr.inlu.net 'rm -rf /home/hubs/www/stage/front/*'
+        - scp -P22 -r dist/* hubs@prod.vr.inlu.net:/home/hubs/www/stage/front/
+        
+build-static-prod:
+    tags: 
+        - docker
+    stage: build
+    rules:
+        - if: '$CI_COMMIT_BRANCH == "master"' 
+
+    artifacts:
+        paths:
+            - dist
+    before_script:
+        - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+        - mkdir -p ~/.ssh
+        - eval $(ssh-agent -s)
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    script:
+        - cat src/const.prod.ts > src/const.ts
+        - npm i
+        - npm ci
+        - npm run build
+        - ssh-add <(echo "$webserverrsa")
+        - ssh -o StrictHostKeyChecking=no hubs@prod.vr.inlu.net 'rm -rf /home/hubs/www/prod/front/*'
+        - scp -P22 -r dist/* hubs@prod.vr.inlu.net:/home/hubs/www/prod/front/
+        
+build-static-manual:
+    tags: 
+        - docker
+    stage: build
+    rules:
+        - when: manual
+
+    artifacts:
+        paths:
+            - dist
+    before_script:
+        - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+        - mkdir -p ~/.ssh
+        - eval $(ssh-agent -s)
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    script:
+        - cat src/manual.prod.ts > src/const.ts
+        - npm i
+        - npm ci
+        - npm run build
+        - ssh-add <(echo "$webserverrsa")
+        - ssh -o StrictHostKeyChecking=no hubs@prod.vr.inlu.net 'rm -rf /home/hubs/www/manual/front/*'
+        - scp -P22 -r dist/* hubs@prod.vr.inlu.net:/home/hubs/www/manual/front/

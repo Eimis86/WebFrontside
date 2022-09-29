@@ -1,0 +1,25 @@
+.page-content {
+    padding-top: 0;
+    min-height: 0;
+}
+
+.submit-btn {
+    position: fixed;
+    bottom: 90px;
+    right: 33px;
+    
+    @media (max-width: 900px) {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    
+    @media screen and (max-width: 420px) {
+        margin: 0 auto;
+        right: auto;
+    }
+}
+  
+.view {
+    border-bottom: none;
+}

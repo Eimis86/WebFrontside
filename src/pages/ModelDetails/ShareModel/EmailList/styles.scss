@@ -1,0 +1,30 @@
+.email-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  .email-item {
+    display: flex;
+    align-items: baseline;
+    background-color: var(--color-secondary);
+    line-height: 34px;
+    border-radius: 16px;
+    padding-left: 13px;
+    font-size: var(--font-size-base-sm);
+    color: var(--color-primary);
+
+    .delete-button {
+      cursor: pointer;
+    }
+
+    .delete-icon {
+      vertical-align: middle;
+      color: var( --color-primary);
+    }
+  }
+
+  .email-item:last-child {
+    margin-bottom: 25px;
+  }
+}

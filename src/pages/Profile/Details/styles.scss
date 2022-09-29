@@ -1,0 +1,44 @@
+.set-password {
+    border-bottom: none;
+    padding: 22px 0;
+}
+
+.user-name input::placeholder,
+.email input::placeholder {
+    color: var(--text-color);
+}
+
+.form-field {
+    padding: 22px 0;
+}
+
+.image-preview {
+    background-color: silver;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    overflow: hidden;
+  
+    img {
+      width: 100%;
+    }
+}
+
+.buttons {
+    position: relative;
+    margin-bottom: 39px;
+    right: 33px;
+    gap: 16px;
+    justify-content: end;
+
+    .discard-btn,
+    .submit-btn {
+        width: 168px;
+    }
+
+    @media screen and (max-width: 450px) {
+        margin: 0 auto;
+        justify-content: center;
+        right: auto;
+    }
+}

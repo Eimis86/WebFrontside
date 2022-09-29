@@ -1,0 +1,221 @@
+{
+  "manual": [
+    {
+      "heading": "PowerPlate Components",
+      "steps": [
+        "Getting to know the main components of your MOVE PowerPlate device",
+        "The Move inner parts are quality designed to provide the highest performance with smooth experience",
+        "The device stays grounded and stable due to the 7 rubber feet on the bottom of the device",
+        "The metal base is used to house al the inner components of the MOVE and surrounded with a base guard",
+        "Next there is the Move Frequency inverter that calculated and determents the optimal frequency for your device",
+        "The motor set and the vibration rubber assembly is used to produce the vibration for you Move Panel",
+        "The platform assembly houses all the components for the Move Device",
+        "The Anti-slip sticker is mounted to the top of the device providing a good grip for your hands and feet",
+        "The control panel assembly houses all the parts the user gets to interact with to setup the workout session",
+        "The power cord gets attached to the control panel assembly providing your device with the power needed to run"
+      ]
+    },
+    {
+      "heading": "PowerPlate Interface",
+      "steps": [
+        "Getting to know the interface of your MOVE Powerplate device",
+        "The MOVE PowerPlate Power connection is controlled by the On/Off switch located on the back of the device",
+        "On the front of the device you can find the timer which indicates the length of your training session or how long will the device run",
+        "The start button turns on the device and starts the vibration",
+        "The pause button is used to stop the vibration and pause or reset the timer",
+        "Pressing the pause button once will pause the timer while pressing it twice will reset the timer",
+        "The Light Indicator panel Indicates the selected Frequency/Amplitude intensity",
+        "The intensity can be increased or decreased by using the + and - buttons next to the light Light Indicator panel",
+        "The MOVE PowerPanel addition attachments can be mounted to the mounting openings on the machine"
+      ]
+    },
+    {
+      "heading": "How to use",
+      "steps": [
+        "Start your training routine by plugging in Move PowerPanel into electricity",
+        "Turn on the power switch",
+        "Press the start button and setup the frequency using the + and - buttons",
+        "The Move PowerPanel can be used for the following sample exercises to prepare faster, perform better and recover quicker.",
+        "Hip Flexor Stretch",
+        "Single-Leg Hamstring Stretch",
+        "Inner Thigh Stretch",
+        "Squat",
+        "Bicep Curl",
+        "Push Ups",
+        "Quad Massage",
+        "Hamstring Massage",
+        "IT Band Massage"
+      ]
+    }
+  ],
+  "index": [
+    {
+      "name": "On/off switch",
+      "chapters": [
+        "2.2",
+        "3.2"
+      ]
+    },
+    {
+      "name": "Timer",
+      "chapters": [
+        "2.3"
+      ]
+    },
+    {
+      "name": "Training session",
+      "chapters": [
+        "2.3"
+      ]
+    },
+    {
+      "name": "Vibration",
+      "chapters": [
+        "2.4",
+        "1.5",
+        "2.5"
+      ]
+    },
+    {
+      "name": "Pause button",
+      "chapters": [
+        "2.5",
+        "2.6"
+      ]
+    },
+    {
+      "name": "Pause timer",
+      "chapters": [
+        "2.5",
+        "2.6"
+      ]
+    },
+    {
+      "name": "Reset timer",
+      "chapters": [
+        "2.5",
+        "2.6"
+      ]
+    },
+    {
+      "name": "Light indicator",
+      "chapters": [
+        "2.7"
+      ]
+    },
+    {
+      "name": "Frequency",
+      "chapters": [
+        "2.7",
+        "1.5",
+        "3.3"
+      ]
+    },
+    {
+      "name": "Rubber feet",
+      "chapters": [
+        "1.3"
+      ]
+    },
+    {
+      "name": "Metal base",
+      "chapters": [
+        "1.4"
+      ]
+    },
+    {
+      "name": "Anti-slip",
+      "chapters": [
+        "1.8"
+      ]
+    },
+    {
+      "name": "Control panel",
+      "chapters": [
+        "1.9"
+      ]
+    },
+    {
+      "name": "Power cord",
+      "chapters": [
+        "1.10"
+      ]
+    },
+    {
+      "name": "Start button",
+      "chapters": [
+        "3.3"
+      ]
+    },
+    {
+      "name": "Hip Flexor Stretch",
+      "chapters": [
+        "3.5"
+      ]
+    },
+    {
+      "name": "Single-Leg Hamstring Stretch",
+      "chapters": [
+        "3.6"
+      ]
+    },
+    {
+      "name": "Inner Thigh Stretch",
+      "chapters": [
+        "3.7"
+      ]
+    },
+    {
+      "name": "Stretch",
+      "chapters": [
+        "3.5",
+        "3.6",
+        "3.7"
+      ]
+    },
+    {
+      "name": "Squat",
+      "chapters": [
+        "3.8"
+      ]
+    },
+    {
+      "name": "Bicep Curl",
+      "chapters": [
+        "3.9"
+      ]
+    },
+    {
+      "name": "Push Up",
+      "chapters": [
+        "3.10"
+      ]
+    },
+    {
+      "name": "Quad Massage",
+      "chapters": [
+        "3.11"
+      ]
+    },
+    {
+      "name": "Hamstring Massage",
+      "chapters": [
+        "3.12"
+      ]
+    },
+    {
+      "name": "IT Band Massage",
+      "chapters": [
+        "3.13"
+      ]
+    },
+    {
+      "name": "Massage",
+      "chapters": [
+        "3.11",
+        "3.12",
+        "3.13"
+      ]
+    }
+  ]
+}

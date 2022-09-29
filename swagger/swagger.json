@@ -1,0 +1,2129 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "CloydAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/admin/hubAccess/assignBulk": {
+      "post": {
+        "tags": [
+          "AdminHubsAccess"
+        ],
+        "summary": "Assign user-hub-isdefault pairs (Bulk)",
+        "requestBody": {
+          "description": "Request Data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminHubUserAssignOperation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/admin/hubAccess/assignToHub": {
+      "post": {
+        "tags": [
+          "AdminHubsAccess"
+        ],
+        "summary": "Grant hub access to a list of users",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminHubAccessRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/admin/hubAccess/assignToUser": {
+      "post": {
+        "tags": [
+          "AdminHubsAccess"
+        ],
+        "summary": "Grant user access to a list of hubs",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminUserAccessRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/admin/hubAccess/hub/{hubId}": {
+      "get": {
+        "tags": [
+          "AdminHubsAccess"
+        ],
+        "summary": "List users having access to a hub",
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "path",
+            "description": "Hub Id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminHubAccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/hubAccess/user/{userId}": {
+      "get": {
+        "tags": [
+          "AdminHubsAccess"
+        ],
+        "summary": "List hubs user has access to",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminUserAccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/ixr/create": {
+      "post": {
+        "tags": [
+          "AdminIXR"
+        ],
+        "summary": "Create a new IXR entry.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminIXRCreateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminIXRPackageResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/ixr/{ixrId}": {
+      "put": {
+        "tags": [
+          "AdminIXR"
+        ],
+        "summary": "Update an IXR entry.",
+        "parameters": [
+          {
+            "name": "ixrId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminIXRCreateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminIXRPackageResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/ixr/{packageId}/finalize": {
+      "post": {
+        "tags": [
+          "AdminIXR"
+        ],
+        "summary": "Finalize IXR entry>",
+        "parameters": [
+          {
+            "name": "packageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminIXRPackageResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/ixr/{packageId}": {
+      "delete": {
+        "tags": [
+          "AdminIXR"
+        ],
+        "summary": "Delete IXR entry",
+        "parameters": [
+          {
+            "name": "packageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "AdminIXR"
+        ],
+        "summary": "Get IXR entry",
+        "parameters": [
+          {
+            "name": "packageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IXRPackageResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/ixr/{packageId}/asset/{assetType}": {
+      "post": {
+        "tags": [
+          "AdminIXR"
+        ],
+        "summary": "Add IXR asset entry",
+        "parameters": [
+          {
+            "name": "packageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "assetType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminIXRAssetCreateResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/ixr/{packageId}/asset/{assetId}": {
+      "delete": {
+        "tags": [
+          "AdminIXR"
+        ],
+        "summary": "Delete IXR asset entry",
+        "parameters": [
+          {
+            "name": "packageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "assetId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/admin/ixr/assetTypes": {
+      "get": {
+        "tags": [
+          "AdminIXR"
+        ],
+        "summary": "Get IXR Asset types list",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminIXRGetAssetTypes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/tags/forHub/{HubId}": {
+      "get": {
+        "tags": [
+          "AdminTags"
+        ],
+        "summary": "Get a list of tags for specified hub.",
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagListResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "AdminTags"
+        ],
+        "summary": "Create a tag for specified hub.",
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminTagRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/tags/{TagId}": {
+      "put": {
+        "tags": [
+          "AdminTags"
+        ],
+        "summary": "Update a specified tag.",
+        "parameters": [
+          {
+            "name": "tagId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminTagRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "AdminTags"
+        ],
+        "summary": "Delete a specified tag.",
+        "parameters": [
+          {
+            "name": "tagId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/favourites/hub": {
+      "get": {
+        "tags": [
+          "Favourites"
+        ],
+        "summary": "List favourite hubs items for current user.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HubListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/favourites/hub/{hubId}": {
+      "post": {
+        "tags": [
+          "Favourites"
+        ],
+        "summary": "Add a hubs item to favourites for current user.",
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Favourites"
+        ],
+        "summary": "Delete a hubs item from favourites for current user.",
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/favourites/package": {
+      "get": {
+        "tags": [
+          "Favourites"
+        ],
+        "summary": "List favourite model items for current user.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FavouritePackagesResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/favourites/package/{packageId}": {
+      "post": {
+        "tags": [
+          "Favourites"
+        ],
+        "summary": "Add a model/package item to favourites for current user.",
+        "parameters": [
+          {
+            "name": "packageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Favourites"
+        ],
+        "summary": "Delete a package/model item from favourites for current user.",
+        "parameters": [
+          {
+            "name": "packageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hub/all": {
+      "get": {
+        "tags": [
+          "Hubs"
+        ],
+        "summary": "Get a list with all \"CloydAPI.HttpStructures.Response.HubListResponse\" items.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HubListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hub/my": {
+      "get": {
+        "tags": [
+          "Hubs"
+        ],
+        "summary": "Get a list with all \"CloydAPI.HttpStructures.Response.HubListResponse\" items.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HubListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hub/{hubId}": {
+      "get": {
+        "tags": [
+          "Hubs"
+        ],
+        "summary": "Get a detailed hub info with packages list.",
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HubDetailsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hub/{hubId}/byTag/{tagId}": {
+      "get": {
+        "tags": [
+          "Hubs"
+        ],
+        "summary": "Get a detailed hub info with packages list, filtered by tag.",
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "tagId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HubDetailsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/hub/all": {
+      "get": {
+        "tags": [
+          "HubsAdmin"
+        ],
+        "summary": "Get a list with all \"CloydAPI.HttpStructures.Response.AdminHubListResponse\" items.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminHubListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/hub/{hubId}": {
+      "get": {
+        "tags": [
+          "HubsAdmin"
+        ],
+        "summary": "Get one \"CloydAPI.HttpStructures.Response.AdminHubListResponse\" item.",
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminHubResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "HubsAdmin"
+        ],
+        "summary": "Update a \"CloydAPI.HttpStructures.Response.AdminHubListResponse\" item.",
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminHubRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminHubResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "HubsAdmin"
+        ],
+        "summary": "Delete a \"CloydAPI.HttpStructures.Response.AdminHubListResponse\" item.",
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/admin/hub/create": {
+      "post": {
+        "tags": [
+          "HubsAdmin"
+        ],
+        "summary": "Create a \"CloydAPI.HttpStructures.Response.AdminHubListResponse\" item.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminHubRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminHubResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ixr/{packageId}": {
+      "get": {
+        "tags": [
+          "IXR"
+        ],
+        "summary": "Get IXR entry>",
+        "parameters": [
+          {
+            "name": "packageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IXRPackageResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/notification/share/model": {
+      "post": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Create a new IXR entry.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationShareModelRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/service/populateDatabase": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "Populate database with temporary values",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/service/error": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HubListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/stepByStep/create": {
+      "post": {
+        "tags": [
+          "StepByStep"
+        ],
+        "summary": "Create a new StepByStep entry.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StepByStepCreateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StepByStepResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/stepByStep/{entryId}": {
+      "put": {
+        "tags": [
+          "StepByStep"
+        ],
+        "summary": "Update an StepByStep entry.",
+        "parameters": [
+          {
+            "name": "entryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StepByStepCreateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StepByStepResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "StepByStep"
+        ],
+        "summary": "Delete a StepByStep entry",
+        "parameters": [
+          {
+            "name": "entryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "StepByStep"
+        ],
+        "summary": "Get One StepByStep entry",
+        "parameters": [
+          {
+            "name": "entryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StepByStepResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/stepByStep": {
+      "get": {
+        "tags": [
+          "StepByStep"
+        ],
+        "summary": "Get StepByStep List",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StepByStepResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tags/byHub/{HubId}/list": {
+      "get": {
+        "tags": [
+          "Tags"
+        ],
+        "summary": "List tags for specified hub.",
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdminHubAccessRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/AdminHubAccessRequestStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminHubAccessRequestPair": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "access": {
+            "$ref": "#/components/schemas/HubAccessLevel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminHubAccessRequestStruct": {
+        "type": "object",
+        "properties": {
+          "hubId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "setAsDefault": {
+            "type": "boolean"
+          },
+          "replaceAllExisting": {
+            "type": "boolean"
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminHubAccessRequestPair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminHubAccessResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminHubAccessResponseStruct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminHubAccessResponseStruct": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "access": {
+            "$ref": "#/components/schemas/HubAccessLevel"
+          },
+          "isDefault": {
+            "type": "boolean"
+          },
+          "lastChange": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminHubListResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminHubStruct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminHubRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/AdminHubStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminHubResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/AdminHubStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminHubStruct": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "imagePreview": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "defaultAccess": {
+            "$ref": "#/components/schemas/HubAccessLevel"
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminHubUserAssignOperation": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HubAssignOperationStruct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminIXRAssetCreateResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/IXRAssetCreateStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminIXRCreateRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/IXRCreateData"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminIXRGetAssetTypes": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminIXRPackageResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/IXRAdminPackageStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminTagRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/AdminTagRequestStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminTagRequestStruct": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminUserAccessRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/AdminUserAccessRequestStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminUserAccessRequestPair": {
+        "type": "object",
+        "properties": {
+          "hubId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "access": {
+            "$ref": "#/components/schemas/HubAccessLevel"
+          },
+          "setAsDefault": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminUserAccessRequestStruct": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "replaceAllExisting": {
+            "type": "boolean"
+          },
+          "hubs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminUserAccessRequestPair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminUserAccessResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminUserAccessResponseStruct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminUserAccessResponseStruct": {
+        "type": "object",
+        "properties": {
+          "hubId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "hubName": {
+            "type": "string",
+            "nullable": true
+          },
+          "access": {
+            "$ref": "#/components/schemas/HubAccessLevel"
+          },
+          "isDefault": {
+            "type": "boolean"
+          },
+          "lastChange": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssetEnum": {
+        "enum": [
+          "Undefined",
+          "Audio",
+          "Model",
+          "Image",
+          "Video",
+          "Manual",
+          "Scene",
+          "Simulation",
+          "Preview",
+          "UnitypackageAndroid",
+          "UnitypackageIos",
+          "SingleGltf",
+          "UnitypackageWeb"
+        ],
+        "type": "string"
+      },
+      "FavouritePackagesResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IXRPackageStruct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HubAccessLevel": {
+        "enum": [
+          "NoAccess",
+          "List",
+          "Read",
+          "Write"
+        ],
+        "type": "string",
+        "description": "Hubs access level types"
+      },
+      "HubAssignOperationStruct": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "hubId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "accessLevel": {
+            "$ref": "#/components/schemas/HubAccessLevel"
+          },
+          "setDefault": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HubDetailsResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/HubDetailsStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HubDetailsStruct": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "imagePreview": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "packages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IXRPackageStruct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HubListResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HubStruct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HubStruct": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "imagePreview": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "isDefault": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IXRAdminPackageStruct": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "hubId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "preview": {
+            "$ref": "#/components/schemas/IXRAssetStruct"
+          },
+          "prefabName": {
+            "type": "string",
+            "nullable": true
+          },
+          "flags": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "isFinalized": {
+            "type": "boolean"
+          },
+          "tags": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "assets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IXRAssetStruct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IXRAssetCreateStruct": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IXRAssetStruct": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "hash": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "contentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "$ref": "#/components/schemas/AssetEnum"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IXRCreateData": {
+        "type": "object",
+        "properties": {
+          "hub": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "flags": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IXRPackageResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/IXRPackageStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IXRPackageStruct": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "hubId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "preview": {
+            "$ref": "#/components/schemas/IXRAssetStruct"
+          },
+          "prefabName": {
+            "type": "string",
+            "nullable": true
+          },
+          "flags": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "tags": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "assets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IXRAssetStruct"
+            },
+            "nullable": true
+          },
+          "scenes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IXRAssetStruct"
+            },
+            "nullable": true
+          },
+          "manuals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IXRAssetStruct"
+            },
+            "nullable": true
+          },
+          "simulations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IXRAssetStruct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotificationShareModelRequest": {
+        "type": "object",
+        "properties": {
+          "auth": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/NotificationShareModelRequestData"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotificationShareModelRequestData": {
+        "type": "object",
+        "properties": {
+          "emailList": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "modelId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StepByStepCreateRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/StepByStepCreateRequestData"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StepByStepCreateRequestData": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "string",
+            "nullable": true
+          },
+          "platform": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StepByStepResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StepByStepResponseStruct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StepByStepResponseStruct": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TagListResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TagStruct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TagResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "messageTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/TagStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TagStruct": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

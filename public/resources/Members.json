@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "name": "John Galt",
+    "email": "who@is.net",
+    "roleId": 0,
+    "image": "/resources/img/user01.png"
+  },
+  {
+    "id": 1,
+    "name": "Bruce Wayne",
+    "email": "bat@man.net",
+    "roleId": 2,
+    "image": "/resources/img/user01.png"
+  },
+  {
+    "id": 2,
+    "name": "Dick Grayson",
+    "email": "robin@mail.net",
+    "roleId": 1,
+    "image": "/resources/img/user01.png"
+  },
+  {
+    "id": 3,
+    "name": "Clark Kent",
+    "email": "super@man.net",
+    "roleId": 0,
+    "image": "/resources/img/user01.png"
+  },
+  {
+    "id": 4,
+    "name": "John Smith",
+    "email": "some@mail.net",
+    "roleId": 0,
+    "image": "/resources/img/user01.png"
+  },
+  {
+    "id": 5,
+    "name": "Stanley H. Tweedle",
+    "email": "stanley@lexx.du",
+    "roleId": 1,
+    "image": "/resources/img/user01.png"
+  }
+]

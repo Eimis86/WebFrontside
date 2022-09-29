@@ -1,0 +1,11 @@
+<svg id="Group_3040" data-name="pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+  <g id="Play_start" transform="translate(0 0)">
+    <circle id="Ellipse_189" cx="45" cy="45" r="45" transform="translate(0 0)" fill="#0e7c7b"/>
+    <g id="Group_5096" transform="translate(-74 105) rotate(-90) scale(7)">
+      <path id="Path_5445" d="M.5,2.071H5a.53.53,0,0,0,.5-.552V.552a.53.53,0,0,0-.5-.552H.5A.53.53,0,0,0,0,.552v.966A.53.53,0,0,0,.5,2.071Z" transform="translate(5.619 14.124)" fill="#fff"/>
+    </g>
+    <g id="Group_5096" transform="translate(-49 105) rotate(-90) scale(7)">
+      <path id="Path_5445" d="M.5,2.071H5a.53.53,0,0,0,.5-.552V.552a.53.53,0,0,0-.5-.552H.5A.53.53,0,0,0,0,.552v.966A.53.53,0,0,0,.5,2.071Z" transform="translate(5.619 14.124)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

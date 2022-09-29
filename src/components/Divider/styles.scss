@@ -1,0 +1,27 @@
+.divider-horizontal {
+  display: block;
+  margin: 0;
+  border-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  size: 1px;
+  color: var(--border-color);
+}
+
+.divider-block {
+  position: relative;
+  margin: 16px 0;
+
+  .divider-text {
+    position: absolute;
+    text-align: center;
+    bottom: -10px;
+    background-color: white;
+    left: 50%;
+    padding: 0 16px;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+    font-size: var(--font-size-base);
+    color: var(--text-color-medium);
+  }
+}

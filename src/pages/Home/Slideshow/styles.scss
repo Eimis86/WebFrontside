@@ -1,0 +1,142 @@
+.highlight {
+  height: 406px;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+
+  &__preview {
+    flex: 1 1 auto;
+    border-right: 1px solid var(--border-color);
+    background-color: var(--background-color-primary);
+    position: relative;
+    overflow: hidden;
+
+    .circle {
+      width: 50%;
+      padding-bottom: 50%;
+      border-radius: 0 0 0 100%;
+      left: 50%;
+      position: absolute;
+      background-color: #D5EBF3;
+    }
+
+    .preview-item {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+
+      &--selected {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+  }
+
+  .preview-item {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    padding: 25px 53px;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1 0 40%;
+    }
+
+    &__title {
+      font-size: 52px;
+      font-weight: var(--font-weight-bold);
+      line-height: 70px;
+      margin: 24px 0;
+    }
+
+    &__description {
+      font-size: var(--font-size-base);
+      color: var(--text-color-medium);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 26px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    &__buttons {
+      //height: 80px;
+      padding: 28px 0 34px 0;
+    }
+
+    &__image {
+      padding: 32px 0;
+      flex: 0 1 60%;
+      text-align: center;
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    flex: 0 1 17%;
+  }
+
+  .gallery-item {
+    //width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #F3FBFE;
+    position: relative;
+    cursor: pointer;
+
+    &--selected {
+      background-color: white;
+    }
+
+    &__image {
+      height: 50%;
+      //width: 25%;
+      //min-width: 80px;
+      margin: 0 16px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &__name {
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-bold);
+      white-space: break-spaces;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0 16px;
+      line-height: 24px;
+    }
+  }
+
+  .gallery-item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .highlight {
+    &__preview{
+      .preview-item {
+        &__info {
+          //display: none;
+        }
+      }
+
+    }
+
+    &__gallery {
+
+    }
+  }
+}

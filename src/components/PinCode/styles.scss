@@ -1,0 +1,26 @@
+.pin-code {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.digit-input {
+  width: 48px;
+  height: 48px;
+  border: 3px solid transparent;
+  border-bottom-color: #A6A9AF;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  font-size: var(--font-size-base-lg);
+
+  &:focus {
+    //border-color: transparent;
+    //box-shadow: 0px 3px 0px 0px var(--color-primary);
+    border-bottom-color: var(--color-primary);
+    caret-color: transparent;
+    //border-width: 2px;
+    //outline: none;
+    //transform: scale(1.05);
+  }
+}

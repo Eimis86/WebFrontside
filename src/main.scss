@@ -1,0 +1,163 @@
+@use "sass:color";
+
+:root {
+  --gap-xxl: 3rem;
+  --gap-xl: 2.5rem;
+  --gap-lg: 2rem;
+  --gap-normal: 1.5rem;
+  --gap-sm: 1rem;
+  --gap-xs: 0.75rem;
+  --gap-xxs: 0.5rem;
+  --gap-xxxs: 0.25rem;
+
+
+  --font-size-base-xs: .875rem; //14px
+  --font-size-base-sm: 1rem;
+  --font-size-base: 1.125rem; //18
+  --font-size-base-lg: 1.375rem; //22
+  --font-size-base-xl: 1.5rem; //24
+  --font-size-base-xxl: 1.75rem; //28
+  --font-size-base-xxxl: 2rem; //32
+
+  --font-size-h1: 3.25rem;  //60 -> 52
+  --font-size-h2: 2.375rem;  //52 -> 38
+  --font-size-h3: 2rem;  //44 -> 32
+  --font-size-h4: 1.75rem;  //36 -> 28
+  --font-size-h5: 1.375rem;  //28 -> 22
+  --font-size-h6: 1.125rem; //22 -> 18
+
+  --line-height-h1: 3.75rem;
+  --line-height-h2: 2.875rem;
+  --line-height-h3: 2.5rem;
+  --line-height-h4: 2.25rem;
+  --line-height-h5: 1.875rem;
+  --line-height-h6: 1.625rem; //26
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --system-grey: #36373B;
+
+  --color-primary: #0E7C7B;
+  --color-primary-alter: #052F5F;
+  --color-primary-dark: #115858;
+
+  --color-secondary: #DFEEEE;
+
+  --color-error: #E04028;
+
+  --text-color: #1D2D44;
+  --text-color-medium: #858585;
+  --text-color-light: white;
+  --text-color-disabled: #C8C8C8;
+
+  --link-color: #28B6EB;
+
+  --border-color: #E5E8EB;
+  --background-color: #F2F3F6;
+  --background-color-primary: #E8F2F6;
+
+  --shadow-color: #00000029;
+  --hover-shadow-color: #0000002B;
+}
+
+html {
+  font-size: var(--font-size-base-sm);
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  //font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  font-size: var(--font-size-base);
+  line-height: 1.5rem;
+  background-color: white;
+  -webkit-overflow-scrolling: touch;
+  //min-height: 100vh;
+}
+
+:global #app-main {
+
+}
+
+a, a:visited, a:active, a:focus {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+  }
+}
+
+h1, h2, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6);
+}
+
+p {
+  line-height: 1.5;
+  margin: 0 0 .33rem 0;
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+small {
+  color: var(--text-color-medium);
+  font-size: var(--font-size-base-xs);
+}

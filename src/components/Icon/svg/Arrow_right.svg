@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+  <g id="Arrow_right" transform="translate(11 11) rotate(90)">
+    <circle id="Ellipse_189" cx="11" cy="11" r="11" transform="translate(-11 -11)" fill="none"/>
+    <g id="Group_2816" transform="translate(5.5 2) rotate(180)">
+      <path id="Path_189" d="M0,0, 5.5,5.25, 11,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

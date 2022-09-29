@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28">
+  <g id="Group_13426" data-name="Group 13426" transform="translate(-0.491 -1.246)">
+    <rect id="Rectangle_3525" data-name="Rectangle 3525" width="27" height="28" rx="13.5" transform="translate(0.491 1.246)" fill="#f4f5f7"/>
+    <g id="n-logo-asus" transform="translate(2.587 12.953)">
+      <path id="Path_5440" data-name="Path 5440" d="M47.668.7h-4a1.335,1.335,0,0,0-1.434,1.134V.7H40.019a.63.63,0,0,0-.607.312L38.8,1.9h8.868Z" transform="translate(-36.6 -0.7)"/>
+      <path id="Path_5441" data-name="Path 5441" d="M0,27.362H1.593l2-3.221L2.166,24Z" transform="translate(0 -22.679)"/>
+      <rect id="Rectangle_3476" data-name="Rectangle 3476" width="1.31" height="1.196" transform="translate(11.306 0)"/>
+      <path id="Path_5442" data-name="Path 5442" d="M299.967,29.644l-4.1-.244a1.081,1.081,0,0,0,1.117,1.106l2.92.227c.227.017.363.074.363.261s-.159.244-.488.244H295.8v1.219h4.065c1.281,0,1.843-.448,1.843-1.469C301.708,30.069,301.2,29.723,299.967,29.644Z" transform="translate(-279.028 -27.773)"/>
+      <path id="Path_5443" data-name="Path 5443" d="M88.474,24.4l-1.293-.074V25.7c0,.431-.215.561-.964.561H85.185c-.618,0-.879-.176-.879-.561V24.2L83,24.1v1.712h-.028c-.074-.5-.261-1.077-1.508-1.162l-4.1-.272c0,.629.448,1,1.151,1.077l2.858.289c.227.017.391.085.391.272,0,.2-.17.227-.431.227H77.31V24.378L76,24.293v3.164h5.335c1.191,0,1.571-.618,1.627-1.134h.028c.147.816.862,1.134,2.07,1.134h1.332c1.412,0,2.081-.431,2.081-1.44Z" transform="translate(-71.691 -22.773)"/>
+      <path id="Path_5444" data-name="Path 5444" d="M280.393,1.9V.7h-4.4a1.279,1.279,0,0,0-1.4,1.117V.7H273.3V1.9h7.093Z" transform="translate(-257.804 -0.7)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,84 @@
+.modal-window {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &--window {
+    .modal-window__window {
+      //width: 590px;
+
+      @media screen and (max-width: 800px) {
+        top: 20px;
+        left: 5%;
+        transform: none;
+        width: 90vw;
+      }
+    }
+  }
+
+  &--full {
+    .modal-window__window {
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 100vw;
+      height: 100vh;
+      max-height: 100vh;
+      padding-top: 32px;
+      //padding-bottom: 100px;
+
+      @media screen and (max-width: 800px) {
+        //padding-bottom: 120px;
+      }
+    }
+  }
+}
+
+.backdrop {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--system-grey);
+  opacity: 0.80;
+  z-index: 11;
+
+  cursor: pointer; // show that the dialog can be closed by clicking on the background
+}
+
+.window-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  width: 480px;
+  max-height: calc(100% - 40px);
+  overflow: auto;
+  padding: 24px;
+  background-color: white;
+  border: 1px solid #DCDCDC;
+  border-radius: 10px;
+
+  @media screen and (max-width: 800px) {
+    width: calc(100% - 70px);
+    max-height: calc(100% - 40px);
+    padding: 16px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: calc(100% - 20px);
+  }
+}
+
+.close-button {
+  position: absolute;
+  /* top: -54px; */
+  /* right: -54px; */
+  z-index: 12;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+}

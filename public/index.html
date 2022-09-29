@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta
+      name="description"
+      content="Cloyd is a 3D model viewer developed by Inlusion Netforms."
+    />
+    <title>Cloyd Web App</title>
+    <base href="/">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="app.r.min.css">
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="app-main"></div>
+<div id="modals-container"></div>
+<script>
+    if (!window.CSS ||
+        !window.CSS.supports ||
+        !window.CSS.supports('color', 'var(--test-color)') ||
+        !Promise ||
+        !Promise.prototype.finally) {
+        // we cut off all browsers that don't support CSS Variables
+        // https://caniuse.com/css-variables
+        // and don't support Promise.finally
+        // https://caniuse.com/?search=Promise.finally
+        window.location.replace('/unsupported.html');
+    }
+</script>
+<script src="app.r.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+</script>
+</body>
+</html>

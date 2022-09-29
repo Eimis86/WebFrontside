@@ -1,0 +1,31 @@
+.hub-menu {
+  margin: 24px 24px 32px 24px;
+
+  &__actions {
+    .action-item {
+      margin: 16px 0;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: var(--text-color);
+      }
+    }
+  }
+
+
+  .storage-block {
+    margin-bottom: 16px;
+    font-size: var(--font-size-base-xs);
+
+    .sub-title {
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-base-xs);
+    }
+
+    .button-buy {
+      margin-top: 8px;
+      width: 100%;
+    }
+  }
+}

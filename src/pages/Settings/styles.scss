@@ -1,0 +1,17 @@
+.access-page {
+  min-height: 0;
+  padding-bottom: 0;
+}
+
+.access-header {
+  margin-bottom: 1rem;
+}
+
+.access-tab-list {
+  flex: 0 0 64px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.access-content {
+  flex: 1 1 100%;
+}

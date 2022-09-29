@@ -1,0 +1,190 @@
+:global {
+  .unity {
+    height: 100%;
+    width: 100%;
+    border: none;
+    display: block;
+  }
+
+  .viewer {
+    position: relative;
+
+    .button {
+      position: absolute;
+      cursor: pointer;
+    }
+  }
+
+  .viewer-full {
+    width: 100%;
+    height: calc(100vh - 155px);
+    z-index: 99999;
+
+    .button {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      //overflow: hidden;
+      padding: 0;
+      margin: 0;
+      z-index: 2;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .btn-minimize {
+      left: 40px;
+      top: 40px;
+    }
+
+    .btn-hide-buttons {
+      bottom: 40px;
+      right: 40px;
+    }
+
+    .btn-menu {
+      left: 40px;
+      top: 140px;
+    }
+
+    .vertical-tools-block {
+      left: 2.5rem;
+      bottom: 20%;
+      width: auto;
+      height: 0;
+      position: absolute;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      overflow: hidden;
+      transition: height 0.3s ease-in-out;
+
+      &--visible {
+        height: auto;
+      }
+
+      .button {
+        position: relative;
+      }
+    }
+
+    .manual-container {
+      position: absolute;
+      width: 80%;
+      margin: 0 10%;
+      //height: 80px;
+      bottom: 24px;
+      background: #000000aa;
+      //background: black;
+      //opacity: .6;
+      border-radius: 16px;
+    }
+  }
+
+  .viewer-headless {
+    width: 100%;
+    height: auto;
+
+    .button {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      //overflow: hidden;
+      padding: 0;
+      margin: 0;
+      z-index: 2;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .btn-minimize {
+      display: none;
+    }
+
+    .btn-hide-buttons {
+      bottom: 40px;
+      right: 40px;
+    }
+
+    .btn-menu {
+      left: 40px;
+      top: 40px;
+    }
+
+    .vertical-tools-block {
+      left: 40px;
+      top: 100px;
+      width: auto;
+      height: 0;
+      position: absolute;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      overflow: hidden;
+      transition: height 0.3s ease-in-out;
+
+      &--visible {
+        height: 272px;
+      }
+
+      .button {
+        position: relative;
+      }
+    }
+
+    .manual-container {
+      position: absolute;
+      width: 80%;
+      margin: 0 10%;
+      //height: 80px;
+      bottom: 24px;
+      background: #000000aa;
+      //background: black;
+      //opacity: .6;
+      border-radius: 16px;
+    }
+  }
+
+  .viewer-preview {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px 30px #00000029;
+    z-index: 9999;
+
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black;
+      color: white;
+      padding: 8px 16px;
+      font-size: var(--font-size-base-xs);
+      z-index: 2;
+    }
+
+    .btn-close {
+      top: 8px;
+      right: 8px;
+      z-index: 2;
+    }
+
+    .btn-restore {
+      bottom: 16px;
+      margin: 0 50%;
+      left: -16px;
+      z-index: 2;
+    }
+  }
+}

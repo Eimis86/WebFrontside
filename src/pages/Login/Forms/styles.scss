@@ -1,0 +1,51 @@
+.title {
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base-xxxl);
+  line-height: 42px;
+  margin-bottom: 40px;
+}
+
+.login-form, .signup-form, .recovery-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  //gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.error {
+  color: var(--color-error);
+  padding: 1rem 0;
+  margin: auto;
+}
+
+.login-form {
+  [data-field='name'] {
+    margin-bottom: var(--gap-normal);
+  }
+
+  [name='submit'] {
+    margin-top: var(--gap-normal);
+  }
+}
+
+.signup-form {
+  [data-field='name'], [data-field='email'], [data-field='password'], [data-field='passwordConfirm'] {
+    margin-bottom: var(--gap-normal);
+  }
+
+  [name='submit'] {
+    margin-top: var(--gap-normal);
+  }
+}
+
+.recovery-form {
+  [data-field='email'], [data-field='pin'], [data-field='password'], [data-field='passwordConfirm'] {
+    margin-bottom: var(--gap-normal);
+  }
+
+  [name='submit'], [name='resend'] {
+    margin-top: var(--gap-normal);
+  }
+}

@@ -1,0 +1,33 @@
+.icon {
+  display: inline-flex;
+  color: var(--text-color);
+
+  &--small {
+    height: 16px;
+    width: 16px;
+  }
+
+  &--medium {
+    height: 24px;
+    width: 24px;
+  }
+
+  &--large {
+    height: 32px;
+    width: 32px;
+  }
+
+  &--xl {
+    height: 48px;
+    width: 48px;
+  }
+
+  svg {
+    fill: currentColor;
+    vertical-align: middle;
+  }
+}
+
+.image {
+
+}
